@@ -5,6 +5,7 @@ function MealItem(props) {
 
     const price = `$${props.price.toFixed(2)}`;
 
+
     return (
         <li className={classes.meal}>
             <div>
@@ -19,3 +20,5 @@ function MealItem(props) {
 }
 
 export default MealItem
+
+
