@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 //5alfye sawda
-const Backdrop = (props) => {
+const Backdrop = () => {
     return <div className={classes.backdrop}></div>
 };
 
