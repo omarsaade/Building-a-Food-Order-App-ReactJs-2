@@ -12,7 +12,7 @@ function MealItemForm(props) {
 
     const submitHandler = (event) => {
         event.preventDefault();//temna3 reloading the page
-        // amountInputRef.current hik 3al 7ell hye el input
+        // amountInputRef.current hik 3al 7ell hye el input 
         const enteredAmount = amountInputRef.current.value;//the value is always a string so we can converted to a number
         const enteredAmountNumber = +enteredAmount;
         if (enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 5) {
