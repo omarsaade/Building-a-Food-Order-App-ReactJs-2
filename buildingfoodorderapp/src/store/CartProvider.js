@@ -11,8 +11,6 @@ const defaultCartState = {
 
 const cartReducer = (state, action) => {
     if (action.type === 'ADD') {
-
-
         const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount; // 0 +22 * 1 = 22
 
         const existingCartItemIndex = state.items.findIndex(
@@ -46,9 +44,35 @@ const cartReducer = (state, action) => {
         };
 
     }
+    //////////////////////////
+
+    if (action.type === "REMOVE") {
+
+
+        const existingCartItemIndex = state.items.findIndex(
+            (item) => item.id === action.id // -1 bcz no match found  m1=m1
+        );
+
+        const existingItem = state.items[existingCartItemIndex];
+        const updatedTotalAmount = state.totalAmount - existingItem.price; // 44 - 22 = 22
+        let updatedItems;
+        if (existingItem.amount === 1) {
+            updatedItems = state.items.filter(item => item.id !== action.id);
+        } else {
+            const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
+            updatedItems = [...state.items];
+            updatedItems[existingCartItemIndex] = updatedItem;
+        }
+
+        return {
+            items: updatedItems,
+            totalAmount: updatedTotalAmount
+        };
+    }
+
 
     return defaultCartState; //fadye
-}
+};
 
 // useReducer is usually preferable to useState when you have complex state 
 // logic that involves multiple sub - values or when the next state depends on the previous one.
