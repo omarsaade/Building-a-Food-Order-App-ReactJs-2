@@ -90,3 +90,68 @@ function CartProvider(props) {
 }
 
 export default CartProvider
+
+
+
+
+
+// 1 - I Wanna check if the item is already part of the Cart.
+
+// 2 - existingCartItemIndex :
+// iza false bya3tik - 1
+// iza true bya3tik el index taba3 hal item
+
+// 3 - existingCartItem : btraje3 el item, yaane el
+// array of object { }
+
+// iza mesh exists btraje3 null el existingCartItem
+
+
+// 5 -if existingCartItem fi item btraje3
+// updatedItem: ...existingcartItem, amount:
+
+// btefrot el item w bt3adel 3al item mne 5ilel el
+// override.
+// yaane iza fi sushi bel cart w badna nzid
+// wahad tene meno, men 3adel el amount bas.
+
+
+// 6 - updatedItems : btefrot fia el array of object
+// 7 - mnjib el item el adim w mna3mlo ovveride
+// bel updatedItem..
+
+// 8 - heda el shi li men 3and if mna3mlo iza ken
+// el item huwe already part of the cart items array
+
+// else: iza ken menzed for the first time
+// mna3mlo concat 3ade
+// ============================================
+
+// total = 22,99 / 45,98
+
+// existingCartItemIndex = -1 / 0
+
+// existingCartItem = undefined / {...}
+
+// const updatedItem = {am 2} // jdide
+
+// updatedItems = [{id:m1,name:"sushi",price,am 1}]
+
+
+// [{...}]
+
+// finally:
+// items : [{id:m1,name:"sushi",price,amount}]
+// totalAmount : 22,99
+// ======================================
+
+
+
+
+
+
+
+
+
+
+
