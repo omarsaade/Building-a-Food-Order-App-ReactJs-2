@@ -31,6 +31,7 @@ function HeaderCartButton(props) {
         return () => {
             //1
             //cleanup function
+            // if something is removed from the page the cleanup fn will run immediately
             clearTimeout(timer);
         };
 
