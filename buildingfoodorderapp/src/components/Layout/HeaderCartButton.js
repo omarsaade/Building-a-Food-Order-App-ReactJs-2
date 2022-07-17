@@ -30,6 +30,7 @@ function HeaderCartButton(props) {
 
         return () => {
             //1
+            //cleanup function
             clearTimeout(timer);
         };
 
