@@ -19,7 +19,7 @@ const cartReducer = (state, action) => {
 
 
         const existingCartItem = state.items[existingCartItemIndex]; //undefined / {id..}
-        let updatedItems;//undefiend
+        let updatedItems;//undefiend 
 
         //Condition
         if (existingCartItem) {
